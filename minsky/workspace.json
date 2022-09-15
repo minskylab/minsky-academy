@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "academy": "apps/academy",
+    "academy-e2e": "apps/academy-e2e"
+  }
+}

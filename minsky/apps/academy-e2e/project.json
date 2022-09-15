@@ -1,0 +1,28 @@
+{
+  "root": "apps/academy-e2e",
+  "sourceRoot": "apps/academy-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/academy-e2e/cypress.json",
+        "devServerTarget": "academy:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "academy:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/academy-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["academy"]
+}
